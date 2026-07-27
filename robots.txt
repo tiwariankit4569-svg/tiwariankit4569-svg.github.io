@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tiwariankit4569-svg.github.io/sitemap.xml
