@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiwari Accounting Online | D.S. Tiwari</title>
-    <!-- Google Fonts for Premium Typography -->
+    <title>Tiwari Accounting Online | Daya Shankar Tiwari</title>
+    <!-- Google Fonts for Corporate Architecture -->
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
-        /* Premium Executive Theme */
+        /* Luxury Corporate Midnight & Gold Theme */
         :root {
             --primary-bg: #0b132b;    /* Deep Midnight Navy */
             --card-bg: #1c2541;       /* Sleek Dark Blue */
-            --accent-gold: #d4af37;   /* Premium Executive Gold */
-            --gold-hover: #f3e5ab;    /* Light Soft Gold */
-            --text-main: #f8fafc;     /* Bright Soft White */
+            --accent-gold: #d4af37;   /* Executive Premium Gold */
+            --gold-hover: #f3e5ab;    /* Soft Light Gold */
+            --text-main: #f8fafc;     /* Clean Soft White */
             --text-muted: #94a3b8;    /* Muted Slate Gray */
-            --success-green: #22c55e; /* Call Green */
+            --call-green: #22c55e;    /* Success Action Green */
+            --email-blue: #2563eb;    /* Corporate Blue */
         }
 
         * {
@@ -32,7 +33,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Navigation Bar */
+        /* Responsive Navigation Bar */
         header {
             background-color: rgba(11, 19, 43, 0.95);
             backdrop-filter: blur(10px);
@@ -67,7 +68,7 @@
             color: var(--accent-gold);
         }
 
-        /* Hero Section */
+        /* Hero Landing Component */
         .hero {
             padding: 8rem 8% 6rem 8%;
             display: flex;
@@ -95,10 +96,11 @@
         
         .hero-subtitle {
             color: var(--accent-gold);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
             font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
         }
 
         .hero-content p {
@@ -107,7 +109,7 @@
             color: var(--text-muted);
         }
 
-        /* Logo Branding Container (Instead of Photo) */
+        /* Dedicated Typography Brand Box (Photo Alternative) */
         .hero-image-container {
             flex: 1;
             display: flex;
@@ -127,7 +129,7 @@
             align-items: center;
             text-align: center;
             padding: 2rem;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.2);
             transition: transform 0.3s ease;
         }
 
@@ -144,30 +146,30 @@
 
         .brand-logo-box h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: var(--text-main);
             font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .brand-logo-box p {
             color: var(--accent-gold);
             font-size: 0.85rem;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-top: 5px;
+            margin-top: 8px;
         }
 
-        /* Buttons & Call Actions */
+        /* Direct Action Channel Buttons */
         .btn-group {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
         }
 
         .btn {
-            background: linear-gradient(135deg, var(--accent-gold) 0%, #aa841c 100%);
             color: #0b132b;
-            padding: 0.8rem 2.2rem;
+            padding: 0.85rem 2rem;
             text-decoration: none;
             border-radius: 30px;
             font-weight: 600;
@@ -175,24 +177,32 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            font-size: 0.95rem;
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
         }
 
         .btn-call {
-            background: linear-gradient(135deg, var(--success-green) 0%, #15803d 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--call-green) 0%, #16a34a 100%);
             color: white;
         }
 
         .btn-call:hover {
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
         }
 
-        /* Layout Structure */
+        .btn-email {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #aa841c 100%);
+            color: #0b132b;
+        }
+
+        .btn-email:hover {
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Main Structural Containers */
         .container {
             max-width: 1200px;
             margin: auto;
@@ -212,16 +222,17 @@
             color: var(--accent-gold);
         }
 
-        /* Details Content Box */
+        /* Detailed Profile Information Cards */
         .about-box {
             background: var(--card-bg);
-            border-radius: 12px;
-            padding: 3.5rem 3rem;
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 16px;
+            padding: 4rem 3.5rem;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .lang-section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 4rem;
         }
 
         .lang-section:last-child {
@@ -231,31 +242,37 @@
         .lang-badge {
             background-color: rgba(212, 175, 55, 0.15);
             color: var(--accent-gold);
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
             font-weight: 600;
             display: inline-block;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid rgba(212, 175, 55, 0.25);
         }
 
         .about-box p {
             font-size: 1.1rem;
             color: var(--text-main);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
             text-align: justify;
+        }
+
+        .about-box strong {
+            color: var(--accent-gold);
         }
         
         .about-box ul {
             list-style: none;
             margin-left: 5px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .about-box ul li {
             position: relative;
-            padding-left: 25px;
-            margin-bottom: 0.8rem;
+            padding-left: 30px;
+            margin-bottom: 1rem;
             color: var(--text-muted);
             font-size: 1.05rem;
         }
@@ -266,9 +283,10 @@
             left: 0;
             color: var(--accent-gold);
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
-        /* Grid Services */
+        /* Professional Expertise Cards Grid Layout */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -277,7 +295,7 @@
 
         .service-card {
             background-color: var(--card-bg);
-            padding: 3rem 2rem;
+            padding: 3rem 2.5rem;
             border-radius: 12px;
             border: 1px solid rgba(212, 175, 55, 0.1);
             transition: all 0.3s ease;
@@ -286,70 +304,47 @@
         .service-card:hover {
             transform: translateY(-8px);
             border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             margin-bottom: 1.2rem;
             color: var(--accent-gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
         }
 
         .service-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            text-align: justify;
         }
 
-        /* Contact Section */
+        /* Contact Operations Section */
         .contact-info {
             background: linear-gradient(135deg, var(--card-bg) 0%, #111a36 100%);
-            padding: 4rem 2rem;
-            border-radius: 16px;
+            padding: 4.5rem 2rem;
+            border-radius: 20px;
             border: 1px solid rgba(212, 175, 55, 0.2);
             text-align: center;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
         }
 
         .contact-info p {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .contact-channels {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
         }
         
         .location-text {
-            color: var(--accent-gold);
-            font-weight: 600;
-            margin-top: 10px;
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #060b18;
-            color: var(--text-muted);
-            text-align: center;
-            padding: 2.5rem;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding-top: 5rem;
-                gap: 2.5rem;
-            }
-            .hero-content h1 { font-size: 2.5rem; }
-            .btn-group { justify-content: center; }
-            header { flex-direction: column; gap: 1rem; padding: 1rem; }
-            header nav a { margin: 0 12px; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header Navigation -->
-    <header>
-        <div class="logo">TIWARI ACCOUNTING ONLINE</div>
-        <nav>
