@@ -1,617 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDYHBVN9B3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Tiwari | Professional Accountant & Digital Services</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        /* Professional CSS Styling */
+        :root {
+            --primary-color: #0f172a; /* Dark Navy Slate */
+            --secondary-color: #2563eb; /* Professional Blue */
+            --text-color: #334155;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+        }
 
-  gtag('config', 'G-EDYHBVN9B3');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daya Shankar Tiwari (A.K. Tiwari) | Professional Accountant</title>
-<meta name="description" content="Daya Shankar Tiwari is a Professional Accountant, Tally Prime Trainer and Accounting Teacher. Providing Accounting, GST, Excel and Tally Training services.">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-<meta name="keywords" content="Daya Shankar Tiwari Accountant, Tally Trainer, Accounting Classes, GST Training, Excel Training, Mauganj Accountant">
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-<meta name="author" content="Daya Shankar Tiwari">
-  <link rel="stylesheet" href="css/style.css">
+        /* Navigation Bar */
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-<a href="https://wa.me/916268312059" class="whatsapp" target="_blank">
-    💬
-</a>
-body{
-background:#f4f7fb;
-color:#222;
-}
-<nav class="navbar">
-    <div class="logo">A.K. Tiwari</div>
+        header .logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-<nav class="navbar">
+        header nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-<div class="logo">
-A.K. Tiwari
-</div>
+        header nav a:hover {
+            color: var(--secondary-color);
+        }
 
-<ul class="nav-links">
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: var(--white);
+            padding: 8rem 5% 6rem 5%;
+            text-align: center;
+        }
 
-<li><a href="#">Home</a></li>
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
 
-<li><a href="#about">About</a></li>
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #93c5fd;
+        }
 
-<li><a href="#services">Services</a></li>
+        .btn {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
 
-<li><a href="#experience">Experience</a></li>
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
 
-<li><a href="#contact">Contact</a></li>
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 4rem 2rem;
+        }
 
-</ul>
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+        }
 
-</nav>
-header{
-background:#0b5ed7;
-color:white;
-padding:50px 20px;
-text-align:center;
-}
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
 
-header h1{
-font-size:42px;
-}
+        /* Services Grid Layout */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1xl));
+            gap: 2rem;
+        }
 
-header h2{
-margin-top:10px;
-font-weight:normal;
-}
+        .service-card {
+            background-color: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid transparent;
+        }
 
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:12px 30px;
-background:white;
-color:#0b5ed7;
-text-decoration:none;
-font-weight:bold;
-border-radius:8px;
-}
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--secondary-color);
+        }
 
-section{
-max-width:1100px;
-margin:auto;
-padding:50px 20px;
-}
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
 
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-margin-bottom:25px;
-}
+        /* Contact Section Form/Details */
+        .contact-info {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-h3{
-color:#0b5ed7;
-margin-bottom:15px;
-}
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
 
-ul{
-padding-left:20px;
-}
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+        }
 
-footer{
-background:#0b5ed7;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
-</style>
-
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            header { flex-direction: column; gap: 1rem; }
+            header nav a { margin: 0 10px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<img src="profile.jpg.jpeg" alt="Daya Shankar Tiwari" width="150">
-<h1>Daya Shankar Tiwari</h1>
-
-<h2>(A.K. Tiwari)</h2>
-
-<p style="margin-top:20px;font-size:22px;">
-Professional Accountant
-</p>
-
-<p style="margin-top:10px;">
-GST • Tally Prime • Excel • Payroll
-</p>
-
-<a class="btn" href="#contact">Hire Me</a>
-<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdBWLO11uu8yhiltkHWNjf199l_y6sHArU0CG35iFHZYNJfNg/viewform?usp=publish-editor" target="_blank">
-Request Resume
-</a>
-</header>
-
-<section>
-<div class="card" id="about">
-
-<h3>About Me</h3>
-
-<p>
-
-Hello!
-
-I am Daya Shankar Tiwari from Farahada, Mauganj (M.P.).
-
-I provide professional Accounting, GST, Tally Prime, Excel, Payroll and Financial Reporting services.
-
-</p>
-
-</div>
-
-<div class="card" id="services">
-
-<h3>Services</h3>
-<div class="card" id="experience">
-
-<h3>Experience</h3>
-
-<p>
-<strong>Accountant Experience</strong>
-</p>
-
-<ul>
-
-<li>Accounting work in Tally Prime</li>
-
-<li>GST Purchase & Sales Entry</li>
-
-<li>GST Return Preparation Support</li>
-
-<li>Bank Reconciliation (BRS)</li>
-
-<li>Cash Book & Expense Management</li>
-
-<li>Payroll and Salary Management</li>
-
-<li>Excel Reports and Financial Statements</li>
-
-</ul>
-
-</div>
-  <div class="card">
-
-<h3>Education</h3>
-
-<ul>
-
-<li>B.Com Graduate</li>
-
-<li>Business Management (1 Year)</li>
-
-<li>Accounting & Finance Knowledge</li>
-
-</ul>
-
-</div>
-<ul>
-
-<li>Accounting</li>
-
-<li>GST Return</li>
-
-<li>Tally Prime</li>
-
-<li>Excel Reports</li>
-
-<li>Payroll</li>
-
-<li>Bank Reconciliation</li>
-
-<li>Financial Statements</li>
-
-</ul>
-
-</div>
-  <div class="card">
-
-<h3>Professional Training & Teaching Services</h3>
-
-<p>
-I provide practical training in Accounting, Tally Prime and GST with real business examples.
-My focus is to help students and beginners understand accounting work professionally.
-</p>
-
-<ul>
-
-<li>
-<strong>Tally Prime Training:</strong>
-Company creation, Ledger, Voucher Entry, GST Entry, Inventory and Reports.
-</li>
-
-<li>
-<strong>Accounting Training:</strong>
-Basic to advanced accounting concepts, Journal, Ledger, Trial Balance, P&L and Balance Sheet.
-</li>
-
-<li>
-<strong>GST Training:</strong>
-GST basics, Purchase/Sales Entry, Input Tax Credit and GST reconciliation.
-</li>
-
-<li>
-<strong>Excel for Accounts:</strong>
-Accounting reports, formulas, salary sheets and data management.
-</li>
-
-<li>
-<strong>Practical Guidance:</strong>
-Real office accounting work and career guidance for beginners.
-</li>
-
-</ul>
-
-</div>
-  <div class="card">
-
-<h3>Student Admission</h3>
-<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe_i_ayUYrfrhMzUazs4Mk9Q06-jQsDfcgqd2OHWiJcWF0Nqg/viewform?usp=publish-editor" target="_blank">
-Apply For Admission
-</a>
-<p>
-Students who want to learn Accounting, Tally Prime, GST and Excel can apply for admission.
-Practical training will be provided with real business examples and office accounting work.
-</p>
-
-<ul>
-
-<li>Basic Accounting to Professional Level Training</li>
-
-<li>Tally Prime with GST Practical Training</li>
-
-<li>Excel for Accounting Training</li>
-
-<li>Practical Voucher Entry & Reports Training</li>
-
-<li>Career Guidance for Accounting Jobs</li>
-
-</ul>
-
-<p>
-<strong>Admission Process:</strong>
-</p>
-
-<ul>
-
-<li>Contact through Email or Request Admission Form</li>
-
-<li>Share your basic details and learning requirements</li>
-
-<li>Course details and timing will be provided</li>
-
-<li>After confirmation, training will be started</li>
-
-</ul>
-
-<a class="btn" href="YOUR_FORM_LINK" target="_blank">
-Apply For Admission
-</a>
-
-</div>
-<div class="card">
-
-<h3>Course Details</h3>
-
-<p>
-Our Accounting & Tally Training courses are designed for students, beginners and professionals who want practical knowledge.
-</p>
-
-<ul>
-
-<li>
-<strong>Tally Prime Training</strong><br>
-Duration: 2 Months<br>
-Topics: Company Creation, Ledger, Voucher Entry, GST, Inventory, Reports
-</li>
-
-<br>
-
-<li>
-<strong>Accounting Practical Training</strong><br>
-Duration: 3 Months<br>
-Topics: Journal, Ledger, Trial Balance, Profit & Loss, Balance Sheet
-</li>
-
-<br>
-
-<li>
-<strong>GST Training</strong><br>
-Duration: 1 Month<br>
-Topics: GST Basics, Purchase/Sales Entry, Input Tax Credit, GST Reports
-</li>
-
-<br>
-
-<li>
-<strong>Excel for Accounting</strong><br>
-Duration: 1 Month<br>
-Topics: Formulas, Reports, Salary Sheet, Data Management
-</li>
-
-</ul>
-
-<p>
-<strong>Course Fees:</strong> Contact for latest fee details
-</p>
-
-</div>
-  <div style="margin-top:30px;">
-
-<a href="#contact" class="btn">📞 Contact Me</a>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdBWLO11uu8yhiltkHWNjf199l_y6sHArU0CG35iFHZYNJfNg/viewform"
-class="btn"
-target="_blank"
-style="margin-left:10px;">
-📄 Request Resume
-</a>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSe_i_ayUYrfrhMzUazs4Mk9Q06-jQsDfcgqd2OHWiJcWF0Nqg/viewform"
-class="btn"
-target="_blank"
-style="margin-left:10px;">
-🎓 Apply Admission
-</a>
-
-</div>
-  <div class="card">
-
-<h3>My Professional Journey</h3>
-
-<div style="display:flex;justify-content:space-around;flex-wrap:wrap;text-align:center;">
-
-<div style="padding:20px;">
-<h2 style="color:#0b5ed7;">100+</h2>
-<p>Students Guided</p>
-</div>
-
-<div style="padding:20px;">
-<h2 style="color:#0b5ed7;">2+</h2>
-<p>Years Learning & Practice</p>
-</div>
-
-<div style="padding:20px;">
-<h2 style="color:#0b5ed7;">500+</h2>
-<p>Accounting Hours</p>
-</div>
-
-<div style="padding:20px;">
-<h2 style="color:#0b5ed7;">100%</h2>
-<p>Practical Learning</p>
-</div>
-
-</div>
-
-</div>
-  <div class="card">
-
-<h3>Certificates & Qualifications</h3>
-
-<ul>
-
-<li>✔ Bachelor of Commerce (B.Com)</li>
-
-<li>✔ Business Management</li>
-
-<li>✔ Tally Prime Training</li>
-
-<li>✔ GST & Accounting Knowledge</li>
-
-<li>✔ MS Excel for Accounting</li>
-
-</ul>
-
-<p>
-Certificates can be shared on request.
-</p>
-
-</div>
-  <div class="card">
-
-<h3>Student Reviews / छात्रों की राय</h3>
-
-<div style="margin-bottom:20px;">
-
-<p>
-⭐⭐⭐⭐⭐
-</p>
-
-<p>
-"The practical training was easy to understand and very helpful for my career."
-</p>
-
-<p>
-<strong>- Student</strong>
-</p>
-
-</div>
-
-<hr>
-
-<div style="margin:20px 0;">
-
-<p>
-⭐⭐⭐⭐⭐
-</p>
-
-<p>
-"Excellent guidance in Tally Prime, GST and Accounting."
-</p>
-
-<p>
-<strong>- Student</strong>
-</p>
-
-</div>
-
-<hr>
-
-<div style="margin-top:20px;">
-
-<p>
-⭐⭐⭐⭐⭐
-</p>
-
-<p>
-"Best learning experience with practical examples."
-</p>
-
-<p>
-<strong>- Student</strong>
-</p>
-
-</div>
-
-</div>
-  <div class="card">
-
-<h3>Why Choose Me? / मुझे क्यों चुनें?</h3>
-
-<ul>
-
-<li>
-<strong>Practical Accounting Experience / व्यावहारिक लेखांकन अनुभव:</strong><br>
-I have practical knowledge of real business accounting work.
-<br>
-मुझे वास्तविक व्यापारिक लेखांकन कार्य का व्यावहारिक अनुभव है।
-</li>
-
-<br>
-
-<li>
-<strong>Tally Prime Expertise / Tally Prime की जानकारी:</strong><br>
-Training includes Company Creation, Ledger, Voucher Entry, GST, Inventory and Reports.
-<br>
-प्रशिक्षण में कंपनी बनाना, लेजर, वाउचर एंट्री, GST, इन्वेंटरी और रिपोर्ट शामिल हैं।
-</li>
-
-<br>
-
-<li>
-<strong>GST & Excel Knowledge / GST और Excel का ज्ञान:</strong><br>
-Knowledge of GST accounting, reconciliation and professional Excel reports.
-<br>
-GST Accounting, Reconciliation और Professional Excel Reports की जानकारी।
-</li>
-
-<br>
-
-<li>
-<strong>Student Friendly Training / विद्यार्थियों के लिए आसान प्रशिक्षण:</strong><br>
-Basic to practical level training for beginners and students.
-<br>
-शुरुआती छात्रों और विद्यार्थियों के लिए बेसिक से प्रैक्टिकल स्तर तक प्रशिक्षण।
-</li>
-
-<br>
-
-<li>
-<strong>Career Support / करियर मार्गदर्शन:</strong><br>
-Guidance for accounting jobs and office practical work.
-<br>
-Accounting job और office work के लिए मार्गदर्शन।
-</li>
-
-</ul>
-
-</div>
-<div class="card">
-
-<h3>Skills</h3>
-
-<ul>
-
-<li>Accounting ⭐⭐⭐⭐⭐</li>
-
-<li>Tally Prime ⭐⭐⭐⭐⭐</li>
-
-<li>GST ⭐⭐⭐⭐</li>
-
-<li>Excel ⭐⭐⭐⭐⭐</li>
-
-</ul>
-
-</div>
-<div class="card" id="contact">
-
-<h3>Contact Us / संपर्क करें</h3>
-
-<p>
-<strong>Name / नाम:</strong><br>
-Daya Shankar Tiwari (A.K. Tiwari)
-</p>
-
-<br>
-
-<p>
-<strong>Professional Profile / प्रोफेशनल प्रोफाइल:</strong><br>
-Professional Accountant | Tally Prime Trainer | Accounting Teacher
-<br>
-प्रोफेशनल अकाउंटेंट | Tally Prime ट्रेनर | अकाउंटिंग शिक्षक
-</p>
-
-<br>
-
-<p>
-<strong>Email / ईमेल:</strong><br>
-tiwariankit4569@gmail.com
-6268312059
-</p>
-
-<br>
-
-<p>
-<strong>Location / स्थान:</strong><br>
-Farahada, Mauganj, Madhya Pradesh
-<br>
-फरहदा, मऊगंज, मध्य प्रदेश
-</p>
-
-<br>
-
-<p>
-<strong>Services Available / उपलब्ध सेवाएं:</strong><br>
-Accounting, GST, Tally Prime, Excel Training, Accounting Classes
-<br>
-लेखांकन, GST, Tally Prime, Excel Training और Accounting Classes
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Daya Shankar Tiwari (A.K. Tiwari)
-
-</footer>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo">ANKIT TIWARI</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero / Welcome Section -->
+    <section class="hero">
+        <h1>Professional Accounting & Digital Solutions</h1>
+        <p>Expert Financial Accounting, Taxation, and Digital CSC Services Tailored for You.</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Financial Accounting</h3>
+                <p>Complete manual and digital accounting management using Tally Prime. Accurate ledger maintenance, financial reporting, and data analysis.</p>
+            </div>
+            <div class="service-card">
+                <h3>Taxation & Returns</h3>
+                <p>Expert support for Income Tax Returns (ITR filing) and Goods & Services Tax (GST) reconciliation and management.</p>
+            </div>
+            <div class="service-card">
+                <h3>CSC Digital Services</h3>
+                <p>Fast and reliable access to essential government digital services, identity documents, and online applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+            <p>Have a project or need financial consulting? Feel free to reach out via email.</p>
+            <a href="mailto:your-tiwariankit4569@gmail.com" class="btn">Email Me Directly</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ankit Tiwari. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
