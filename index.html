@@ -4,10 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiwari Accounting Online | Daya Shankar Tiwari</title>
-    <!-- बाहरी CSS फ़ाइल को जोड़ने का लिंक -->
+    <!-- बाहरी CSS फ़ाइल का लिंक -->
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        /* एडमिशन फॉर्म के लिए प्रीमियम स्टाइल्स */
+        .admission-section {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #111a36 100%);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            max-width: 650px;
+            margin: 3rem auto;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--accent-gold);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            background-color: rgba(11, 19, 43, 0.8);
+            color: var(--text-main);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+        /* सुरक्षा चेतावनी (Warning Text Style) */
+        .security-warning {
+            background-color: rgba(239, 68, 68, 0.15);
+            border: 1px solid #ef4444;
+            padding: 1rem;
+            border-radius: 8px;
+            color: #fca5a5;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            font-weight: 500;
+        }
+        .security-warning strong {
+            color: #ef4444;
+        }
+        .btn-submit {
+            background: linear-gradient(135deg, var(--admission-orange) 0%, #ea580c 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,6 +80,7 @@
         <nav>
             <a href="#about">Experience Profile</a>
             <a href="#training">Practical Training</a>
+            <a href="#admission">Admission Form</a>
             <a href="#contact">Contact Desk</a>
         </nav>
     </header>
@@ -30,11 +94,10 @@
             
             <div class="btn-group">
                 <a href="tel:+917509927907" class="btn btn-call">📞 Click to Call Desk</a>
-                <a href="mailto:tiwariankit4569@://gmail.com" class="btn btn-admission">🎓 Apply for Admission</a>
+                <a href="#admission" class="btn btn-admission">🎓 Apply for Admission</a>
             </div>
         </div>
         
-        <!-- फोटो की जगह प्रीमियम टेक्स्ट लोगो -->
         <div class="hero-image-container">
             <div class="brand-logo-box">
                 <div class="logo-icon">📊</div>
@@ -79,10 +142,48 @@
                 <p>किताबी ज्ञान से हटकर, असली कंपनियों के वास्तविक बिलों, परचेज एंट्रीज और बैंक स्टेटमेंट्स पर **Online और Offline दोनों माध्यमों** से प्रैक्टिकल ट्रेनिंग।</p>
             </div>
         </div>
+    </section>
+
+    <!-- नया लाइव एडमिशन फॉर्म सेक्शन -->
+    <section class="container" id="admission">
+        <h2 class="section-title">Course <span>Admission Form</span></h2>
         
-        <div style="text-align: center; margin-top: 3.5rem;">
-            <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem;">नए लाइव प्रैक्टिकल बैचों में अपनी सीट सुरक्षित करने के लिए अभी नीचे दिए गए एडमिशन लिंक पर क्लिक करें।</p>
-            <a href="mailto:tiwariankit4569@://gmail.com" class="btn btn-admission" style="font-size: 1.1rem; padding: 1rem 3rem;">📥 Click Here For Instant Admission</a>
+        <div class="admission-section">
+            <!-- Formspree Action Link सीधे ईमेल डिलीवरी के लिए -->
+            <form action="https://formspree.io" method="POST">
+                
+                <!-- सुरक्षा चेतावनी टेक्स्ट -->
+                <div class="security-warning">
+                    ⚠️ <strong>महत्वपूर्ण सुरक्षा चेतावनी:</strong> यदि किसी भी अज्ञात व्यक्ति या बाहरी नंबर द्वारा हमारे संस्थान का नाम लेकर आपसे कॉल पर पैसों की मांग की जाती है, तो कृपया किसी भी प्रकार का भुगतान न करें। हम किसी भी अनाधिकृत लेनदेन की जिम्मेदारी नहीं लेते हैं।
+                </div>
+
+                <div class="form-group">
+                    <label for="name">विद्यार्थी का नाम (Full Name):</label>
+                    <input type="text" id="name" name="Student Name" placeholder="अपना पूरा नाम दर्ज करें" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">मोबाइल नंबर (Mobile Number):</label>
+                    <input type="tel" id="phone" name="Mobile Number" placeholder="अपना 10 अंकों का मोबाइल नंबर भरें" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">ईमेल आईडी (Email ID):</label>
+                    <input type="email" id="email" name="Email Address" placeholder="अपनी ईमेल आईडी दर्ज करें" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">कोर्स का चयन करें (Select Course):</label>
+                    <select id="course" name="Selected Course" required>
+                        <option value="" disabled selected>-- कृपया अपना कोर्स चुनें --</option>
+                        <option value="Tally Prime Practical Training">Tally Prime (Industrial Accounting Training)</option>
+                        <option value="Tally ERP 9 Modules">Tally ERP 9 (Core Systems & Ledger Management)</option>
+                        <option value="Both Courses (Combo Batch)">Tally Prime + Tally ERP 9 (Complete Suite)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Submit Application 📥</button>
+            </form>
         </div>
     </section>
 
@@ -97,14 +198,3 @@
                 <a href="mailto:tiwariankit4569@gmail.com" class="btn btn-email" style="font-size: 1.1rem; padding: 1rem 2.5rem; color: #0b132b; background: var(--accent-gold);">✉️ Email Office</a>
             </div>
             
-            <div style="color: var(--accent-gold); font-weight: 600; margin-top: 2rem; font-size: 1.1rem;">📍 District Mauganj, Madhya Pradesh (MP), India</div>
-        </div>
-    </section>
-
-    <!-- फुटर -->
-    <footer>
-        <p>&copy; 2026 Tiwari Accounting Online. All Rights Reserved | Managed for Career Excellence by D.S. Tiwari.</p>
-    </footer>
-
-</body>
-</html>
