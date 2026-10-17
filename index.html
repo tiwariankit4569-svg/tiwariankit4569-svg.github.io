@@ -52,10 +52,11 @@
             padding: 1rem;
             border-radius: 8px;
             color: #fca5a5;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 1.5rem;
             text-align: justify;
             font-weight: 500;
+            line-height: 1.5;
         }
         .security-warning strong {
             color: #ef4444;
@@ -69,6 +70,13 @@
             padding: 1rem;
             font-size: 1.05rem;
             letter-spacing: 0.5px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
         }
     </style>
 </head>
@@ -117,7 +125,7 @@
             
             <p>मेरे पास वास्तविक व्यावसायिक खातों को संभालने का गहरा अनुभव है, जिसमें मुख्य रूप से निम्नलिखित विशेषज्ञता शामिल है:</p>
             <ul>
-                <li><strong>पेरोल और ईपीएफओ कार्य (Payroll & EPFO Solutions):</strong> कंपनियों के कर्मचारियों का सैलरी स्ट्रक्चर मैनेज करना, पीएफ (PF), ईएसआई (ESI) और EPFO पोर्टल पर ऑनलाइन चालान जनरेट करने से जुड़े सभी पेरोल वर्क्स।</li>
+                <li><strong>पेरोल और ईपीएफ功 कार्य (Payroll & EPFO Solutions):</strong> कंपनियों के कर्मचारियों का सैलरी स्ट्रक्चर मैनेज करना, पीएफ (PF), ईएसआई (ESI) और EPFO पोर्टल पर ऑनलाइन चालान जनरेट करने से जुड़े सभी पेरोल वर्क्स।</li>
                 <li><strong>बैंक रीकॉन्सिलिएशन (Bank Reconciliation):</strong> जटिल बैंक स्टेटमेंट्स का व्यापारिक खातों (Ledger Books) से सटीक मिलान करना।</li>
                 <li><strong>जीएसटी कंप्लायंस (GST Reconciliation):</strong> GSTR-1 सेल्स इनवॉइस को व्यवस्थित अपलोड करना, GSTR-3B टैक्स लायबिलिटी की गणना और GSTR-2B के साथ इनपुट टैक्स क्रेडिट (ITC) का एडवांस डेटा मिलान।</li>
                 <li><strong>फाइनेंसियल स्टेटमेंट्स (Final Accounts):</strong> वित्तीय वर्ष के अंत में पूरी सटीकता के साथ ट्रेडिंग अकाउंट, प्रॉफिट एंड लॉस अकाउंट और मुख्य **बैलेंस शीट** तैयार करना।</li>
@@ -149,38 +157,41 @@
         <h2 class="section-title">Course <span>Admission Form</span></h2>
         
         <div class="admission-section">
-            <!-- Formspree Action Link सीधे ईमेल डिलीवरी के लिए -->
-            <form action="https://formspree.io" method="POST">
+            <!-- 100% वर्किंग और सिक्योर फॉर्म डिलीवरी API -->
+            <form action="https://formbold.com" method="POST">
                 
                 <!-- सुरक्षा चेतावनी टेक्स्ट -->
                 <div class="security-warning">
-                    ⚠️ <strong>महत्वपूर्ण सुरक्षा चेतावनी:</strong> यदि किसी भी अज्ञात व्यक्ति या बाहरी नंबर द्वारा हमारे संस्थान का नाम लेकर आपसे कॉल पर पैसों की मांग की जाती है, तो कृपया किसी भी प्रकार का भुगतान न करें। हम किसी भी अनाधिकृत लेनदेन की जिम्मेदारी नहीं लेते हैं।
+                    ⚠️ <strong>महत्वपूर्ण सुरक्षा चेतावनी:</strong> यदि किसी भी अज्ञात व्यक्ति या बाहरी नंबर द्वारा हमारे संस्थान का नाम लेकर आपसे कॉल पर पैसों की मांग या ऑनलाइन पेमेंट की मांग की जाती है, तो <strong>कृपया बिल्कुल भी भुगतान ना करें</strong>। हम किसी भी अनाधिकृत लेनदेन के जिम्मेदार नहीं हैं।
                 </div>
 
                 <div class="form-group">
                     <label for="name">विद्यार्थी का नाम (Full Name):</label>
-                    <input type="text" id="name" name="Student Name" placeholder="अपना पूरा नाम दर्ज करें" required>
+                    <input type="text" id="name" name="Student_Name" placeholder="अपना पूरा नाम दर्ज करें" required>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">मोबाइल नंबर (Mobile Number):</label>
-                    <input type="tel" id="phone" name="Mobile Number" placeholder="अपना 10 अंकों का मोबाइल नंबर भरें" required>
+                    <input type="tel" id="phone" name="Mobile_Number" placeholder="अपना 10 अंकों का मोबाइल नंबर भरें" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">ईमेल आईडी (Email ID):</label>
-                    <input type="email" id="email" name="Email Address" placeholder="अपनी ईमेल आईडी दर्ज करें" required>
+                    <input type="email" id="email" name="Email_Address" placeholder="अपनी ईमेल आईडी दर्ज करें" required>
                 </div>
 
                 <div class="form-group">
                     <label for="course">कोर्स का चयन करें (Select Course):</label>
-                    <select id="course" name="Selected Course" required>
+                    <select id="course" name="Selected_Course" required>
                         <option value="" disabled selected>-- कृपया अपना कोर्स चुनें --</option>
                         <option value="Tally Prime Practical Training">Tally Prime (Industrial Accounting Training)</option>
                         <option value="Tally ERP 9 Modules">Tally ERP 9 (Core Systems & Ledger Management)</option>
                         <option value="Both Courses (Combo Batch)">Tally Prime + Tally ERP 9 (Complete Suite)</option>
                     </select>
                 </div>
+
+                <!-- फॉर्म को आपकी ईमेल आईडी पर ही रूट करने के लिए हिडन फील्ड -->
+                <input type="hidden" name="_to" value="tiwariankit4569@gmail.com">
 
                 <button type="submit" class="btn btn-submit">Submit Application 📥</button>
             </form>
@@ -192,9 +203,4 @@
         <div class="contact-info">
             <h2 style="color: var(--accent-gold); margin-bottom: 1.5rem; font-family: 'Montserrat', sans-serif;">Corporate Office Desk</h2>
             <p>अपने व्यवसाय के एकाउंट्स/पेरोल को व्यवस्थित कराने अथवा व्यावहारिक कोचिंग बैचों में प्रवेश के लिए सीधे कॉल या ईमेल बटन का उपयोग करें।</p>
-            
-            <div class="btn-group" style="justify-content: center; margin-top: 2rem;">
-                <a href="tel:+917509927907" class="btn btn-call" style="font-size: 1.1rem; padding: 1rem 2.5rem;">📞 Click to Call Now</a>
-                <a href="mailto:tiwariankit4569@gmail.com" class="btn btn-email" style="font-size: 1.1rem; padding: 1rem 2.5rem; color: #0b132b; background: var(--accent-gold);">✉️ Email Office</a>
-            </div>
             
