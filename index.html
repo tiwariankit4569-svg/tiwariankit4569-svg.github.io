@@ -4,329 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiwari Accounting Online | Daya Shankar Tiwari</title>
-    <!-- Google Fonts for Corporate Architecture -->
+    <!-- बाहरी CSS फ़ाइल को जोड़ने का लिंक -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
     <link href="https://googleapis.com" rel="stylesheet">
-    <style>
-        /* Luxury Corporate Midnight & Gold Theme Embedded to prevent any CSS loss */
-        :root {
-            --primary-bg: #0b132b;    /* Deep Midnight Navy */
-            --card-bg: #1c2541;       /* Sleek Dark Blue */
-            --accent-gold: #d4af37;   /* Executive Premium Gold */
-            --gold-hover: #f3e5ab;    /* Soft Light Gold */
-            --text-main: #f8fafc;     /* Clean Soft White */
-            --text-muted: #94a3b8;    /* Muted Slate Gray */
-            --call-green: #22c55e;    /* Success Action Green */
-            --admission-orange: #f97316; /* Professional Attention Orange */
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: var(--primary-bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        /* Navigation Bar */
-        header {
-            background-color: rgba(11, 19, 43, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.2rem 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--accent-gold);
-        }
-
-        header .logo {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--accent-gold);
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        header nav a {
-            color: var(--text-main);
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-
-        header nav a:hover {
-            color: var(--accent-gold);
-        }
-
-        /* Hero Landing Section */
-        .hero {
-            padding: 8rem 8% 6rem 8%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 4rem;
-            background: radial-gradient(circle at top right, rgba(28, 37, 65, 0.8) 0%, rgba(11, 13, 43, 1) 100%);
-        }
-
-        .hero-content {
-            flex: 1;
-        }
-
-        .hero-content h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .hero-content h1 span {
-            color: var(--accent-gold);
-        }
-        
-        .hero-subtitle {
-            color: var(--accent-gold);
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-content p {
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            color: var(--text-muted);
-        }
-
-        /* Brand Logo Box Container */
-        .hero-image-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .brand-logo-box {
-            width: 300px;
-            height: 300px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, var(--card-bg) 0%, #0f172a 100%);
-            border: 3px dashed var(--accent-gold);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            box-shadow: 0 0 35px rgba(212, 175, 55, 0.2);
-        }
-
-        .brand-logo-box .logo-icon {
-            font-size: 3.5rem;
-            color: var(--accent-gold);
-            margin-bottom: 10px;
-        }
-
-        .brand-logo-box h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            color: var(--text-main);
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .brand-logo-box p {
-            color: var(--accent-gold);
-            font-size: 0.85rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-top: 8px;
-        }
-
-        /* Action Buttons */
-        .btn-group {
-            display: flex;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            color: #0b132b;
-            padding: 0.85rem 2rem;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.95rem;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-call {
-            background: linear-gradient(135deg, var(--call-green) 0%, #16a34a 100%);
-            color: white;
-        }
-
-        .btn-call:hover {
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
-        }
-
-        .btn-admission {
-            background: linear-gradient(135deg, var(--admission-orange) 0%, #ea580c 100%);
-            color: white;
-            animation: pulse 2s infinite;
-        }
-
-        .btn-admission:hover {
-            box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
-
-        /* Layout Structure */
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 5rem 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 4rem;
-            color: var(--text-main);
-            font-weight: 700;
-        }
-
-        .section-title span {
-            color: var(--accent-gold);
-        }
-
-        /* About & Experience Block */
-        .about-box {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 4rem 3.5rem;
-            border: 1px solid rgba(212, 175, 55, 0.12);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .lang-badge {
-            background-color: rgba(212, 175, 55, 0.15);
-            color: var(--accent-gold);
-            padding: 6px 16px;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(212, 175, 55, 0.25);
-        }
-
-        .about-box p {
-            font-size: 1.1rem;
-            color: var(--text-main);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-box strong {
-            color: var(--accent-gold);
-        }
-        
-        .about-box ul {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .about-box ul li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 1rem;
-            color: var(--text-muted);
-            font-size: 1.05rem;
-        }
-
-        .about-box ul li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent-gold);
-            font-weight: bold;
-        }
-
-        /* Services Architecture Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .service-card {
-            background-color: var(--card-bg);
-            padding: 3rem 2.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(212, 175, 55, 0.4);
-        }
-
-        .service-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 1.2rem;
-            color: var(--accent-gold);
-        }
-
-        /* Footer System */
-        footer {
-            background-color: #060b18;
-            color: var(--text-muted);
-            text-align: center;
-            padding: 2.5rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 968px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding-top: 5rem;
-                gap: 3rem;
-            }
-            .hero-content h1 { font-size: 2.4rem; }
-            .btn-group { justify-content: center; }
-            header { flex-direction: column; gap: 1rem; padding: 1rem; }
-            header nav a { margin: 0 12px; }
-        }
-    </style>
 </head>
 <body>
 
+    <!-- नेविगेशन बार -->
     <header>
         <div class="logo">TIWARI ACCOUNTING ONLINE</div>
         <nav>
@@ -336,7 +21,90 @@
         </nav>
     </header>
 
+    <!-- मुख्य हीरो सेक्शन -->
     <section class="hero">
         <div class="hero-content">
             <h1>Daya Shankar <span>Tiwari</span></h1>
             <div class="hero-subtitle">B.Com (Banking, Finance & Accounting)</div>
+            <p>Senior accounting consultant and industrial trainer operating from Mauganj, MP. Providing advanced ledger structuring, payroll processing, and real company practical coaching modules.</p>
+            
+            <div class="btn-group">
+                <a href="tel:+917509927907" class="btn btn-call">📞 Click to Call Desk</a>
+                <a href="mailto:tiwariankit4569@://gmail.com" class="btn btn-admission">🎓 Apply for Admission</a>
+            </div>
+        </div>
+        
+        <!-- फोटो की जगह प्रीमियम टेक्स्ट लोगो -->
+        <div class="hero-image-container">
+            <div class="brand-logo-box">
+                <div class="logo-icon">📊</div>
+                <h2>TIWARI</h2>
+                <h2>ACCOUNTING</h2>
+                <p>Online Services</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- अनुभव और स्किल्स सेक्शन -->
+    <section class="container" id="about">
+        <h2 class="section-title">Professional <span>Experience & Expertise</span></h2>
+        <div class="about-box">
+            <div class="lang-badge">Industrial Background (Hindi/Hinglish)</div>
+            <p>नमस्ते, मैं <strong>दया शंकर तिवारी (डी.एस. तिवारी)</strong> हूँ, जो कि **जिला मऊगंज, मध्य प्रदेश** से अपनी व्यावसायिक वित्तीय सेवाएं प्रदान करता हूँ। मैं व्यापारिक फर्म्स के लिए एक अनुभवी अकाउंटेंट और औद्योगिक ट्रेनर के रूप में कार्य करता हूँ।</p>
+            
+            <p>मेरे पास वास्तविक व्यावसायिक खातों को संभालने का गहरा अनुभव है, जिसमें मुख्य रूप से निम्नलिखित विशेषज्ञता शामिल है:</p>
+            <ul>
+                <li><strong>पेरोल और ईपीएफओ कार्य (Payroll & EPFO Solutions):</strong> कंपनियों के कर्मचारियों का सैलरी स्ट्रक्चर मैनेज करना, पीएफ (PF), ईएसआई (ESI) और EPFO पोर्टल पर ऑनलाइन चालान जनरेट करने से जुड़े सभी पेरोल वर्क्स।</li>
+                <li><strong>बैंक रीकॉन्सिलिएशन (Bank Reconciliation):</strong> जटिल बैंक स्टेटमेंट्स का व्यापारिक खातों (Ledger Books) से सटीक मिलान करना।</li>
+                <li><strong>जीएसटी कंप्लायंस (GST Reconciliation):</strong> GSTR-1 सेल्स इनवॉइस को व्यवस्थित अपलोड करना, GSTR-3B टैक्स लायबिलिटी की गणना और GSTR-2B के साथ इनपुट टैक्स क्रेडिट (ITC) का एडवांस डेटा मिलान।</li>
+                <li><strong>फाइनेंसियल स्टेटमेंट्स (Final Accounts):</strong> वित्तीय वर्ष के अंत में पूरी सटीकता के साथ ट्रेडिंग अकाउंट, प्रॉफिट एंड लॉस अकाउंट और मुख्य **बैलेंस शीट** तैयार करना।</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- प्रैक्टिकल ट्रेनिंग सेक्शन -->
+    <section class="container" id="training">
+        <h2 class="section-title">Real Company <span>Practical Training</span></h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Tally Prime Architecture</h3>
+                <p>जीएसटी इनवॉइसिंग, ई-वे बिल जनरेशन, डेटा बैकअप, वाउचर क्लासिफिकेशन और लाइव कंपनी डेटा पर पूरी बारीकी के साथ आधुनिक Tally Prime की ट्रेनिंग।</p>
+            </div>
+            <div class="service-card">
+                <h3>Tally ERP 9 Mastery</h3>
+                <p>पारंपरिक और महत्वपूर्ण व्यावसायिक संरचनाओं के लिए बुनियादी इन्वेंट्री ट्रैकिंग, टैक्स कैलकुलेशन और लेजर क्रिएशन की मजबूत व्यावहारिक समझ।</p>
+            </div>
+            <div class="service-card">
+                <h3>Live Project Internships</h3>
+                <p>किताबी ज्ञान से हटकर, असली कंपनियों के वास्तविक बिलों, परचेज एंट्रीज और बैंक स्टेटमेंट्स पर **Online और Offline दोनों माध्यमों** से प्रैक्टिकल ट्रेनिंग।</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3.5rem;">
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem;">नए लाइव प्रैक्टिकल बैचों में अपनी सीट सुरक्षित करने के लिए अभी नीचे दिए गए एडमिशन लिंक पर क्लिक करें।</p>
+            <a href="mailto:tiwariankit4569@://gmail.com" class="btn btn-admission" style="font-size: 1.1rem; padding: 1rem 3rem;">📥 Click Here For Instant Admission</a>
+        </div>
+    </section>
+
+    <!-- संपर्क सेक्शन -->
+    <section class="container" id="contact">
+        <div class="contact-info">
+            <h2 style="color: var(--accent-gold); margin-bottom: 1.5rem; font-family: 'Montserrat', sans-serif;">Corporate Office Desk</h2>
+            <p>अपने व्यवसाय के एकाउंट्स/पेरोल को व्यवस्थित कराने अथवा व्यावहारिक कोचिंग बैचों में प्रवेश के लिए सीधे कॉल या ईमेल बटन का उपयोग करें।</p>
+            
+            <div class="btn-group" style="justify-content: center; margin-top: 2rem;">
+                <a href="tel:+917509927907" class="btn btn-call" style="font-size: 1.1rem; padding: 1rem 2.5rem;">📞 Click to Call Now</a>
+                <a href="mailto:tiwariankit4569@gmail.com" class="btn btn-email" style="font-size: 1.1rem; padding: 1rem 2.5rem; color: #0b132b; background: var(--accent-gold);">✉️ Email Office</a>
+            </div>
+            
+            <div style="color: var(--accent-gold); font-weight: 600; margin-top: 2rem; font-size: 1.1rem;">📍 District Mauganj, Madhya Pradesh (MP), India</div>
+        </div>
+    </section>
+
+    <!-- फुटर -->
+    <footer>
+        <p>&copy; 2026 Tiwari Accounting Online. All Rights Reserved | Managed for Career Excellence by D.S. Tiwari.</p>
+    </footer>
+
+</body>
+</html>
