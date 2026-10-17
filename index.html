@@ -9,7 +9,83 @@
     <!-- Google Fonts -->
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
-        /* एडमिशन फॉर्म के लिए प्रीमियम स्टाइल्स */
+        /* प्रीमियम ऑनलाइन सर्विसेज ग्रिड और फॉर्म के लिए स्पेशल कस्टमाइजेशन */
+        .digital-services-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border: 2px solid var(--accent-gold);
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            margin-top: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .highlight-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+        }
+
+        .highlight-card .service-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #aa841c 100%);
+            color: #0b132b;
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .highlight-card h4 {
+            color: var(--text-main);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .highlight-card ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .highlight-card ul li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlight-card ul li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
         .admission-section {
             background: linear-gradient(135deg, var(--card-bg) 0%, #111a36 100%);
             padding: 4rem 2rem;
@@ -19,10 +95,12 @@
             margin: 3rem auto;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
+
         .form-group {
             margin-bottom: 1.5rem;
             text-align: left;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
@@ -30,6 +108,7 @@
             font-weight: 500;
             font-size: 0.95rem;
         }
+
         .form-group input, .form-group select {
             width: 100%;
             padding: 0.85rem 1rem;
@@ -38,14 +117,8 @@
             background-color: rgba(11, 19, 43, 0.8);
             color: var(--text-main);
             font-size: 1rem;
-            transition: all 0.3s ease;
         }
-        .form-group input:focus, .form-group select:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
-        }
-        /* सुरक्षा चेतावनी (Warning Text Style) */
+
         .security-warning {
             background-color: rgba(239, 68, 68, 0.15);
             border: 1px solid #ef4444;
@@ -56,11 +129,8 @@
             margin-bottom: 1.5rem;
             text-align: justify;
             font-weight: 500;
-            line-height: 1.5;
         }
-        .security-warning strong {
-            color: #ef4444;
-        }
+
         .btn-submit {
             background: linear-gradient(135deg, var(--admission-orange) 0%, #ea580c 100%);
             color: white;
@@ -69,27 +139,48 @@
             width: 100%;
             padding: 1rem;
             font-size: 1.05rem;
-            letter-spacing: 0.5px;
             border-radius: 30px;
             font-weight: 600;
             transition: all 0.3s ease;
         }
+
         .btn-submit:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
         }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn-call { background: var(--call-green); color: white; }
+        .nav-btn-email { background: var(--accent-gold); color: #0b132b; }
     </style>
 </head>
 <body>
 
-    <!-- नेविगेशन बार -->
+    <!-- नेविगेशन बार (कॉल और ईमेल बटन के साथ) -->
     <header>
         <div class="logo">TIWARI ACCOUNTING ONLINE</div>
-        <nav>
-            <a href="#about">Experience Profile</a>
+        <nav style="display: flex; align-items: center;">
+            <a href="#about">Experience</a>
+            <a href="#online-services">Online Services</a>
             <a href="#training">Practical Training</a>
             <a href="#admission">Admission Form</a>
-            <a href="#contact">Contact Desk</a>
+            <div class="nav-buttons" style="margin-left: 20px;">
+                <a href="tel:+917509927907" class="nav-btn nav-btn-call">📞 Call Now</a>
+                <a href="mailto:tiwariankit4569@gmail.com" class="nav-btn nav-btn-email">✉️ Email</a>
+            </div>
         </nav>
     </header>
 
@@ -98,11 +189,11 @@
         <div class="hero-content">
             <h1>Daya Shankar <span>Tiwari</span></h1>
             <div class="hero-subtitle">B.Com (Banking, Finance & Accounting)</div>
-            <p>Senior accounting consultant and industrial trainer operating from Mauganj, MP. Providing advanced ledger structuring, payroll processing, and real company practical coaching modules.</p>
+            <p>Senior accounting consultant and industrial trainer operating from Mauganj, MP. Providing advanced ledger structuring, payroll processing, corporate tax compliance, and digital government solutions.</p>
             
             <div class="btn-group">
                 <a href="tel:+917509927907" class="btn btn-call">📞 Click to Call Desk</a>
-                <a href="#admission" class="btn btn-admission">🎓 Apply for Admission</a>
+                <a href="mailto:tiwariankit4569@gmail.com" class="btn btn-email" style="background: var(--accent-gold); color: #0b132b;">✉️ Send Email Inquiry</a>
             </div>
         </div>
         
@@ -116,91 +207,65 @@
         </div>
     </section>
 
-    <!-- अनुभव और स्किल्स सेक्शन -->
-    <section class="container" id="about">
-        <h2 class="section-title">Professional <span>Experience & Expertise</span></h2>
-        <div class="about-box">
-            <div class="lang-badge">Industrial Background (Hindi/Hinglish)</div>
-            <p>नमस्ते, मैं <strong>दया शंकर तिवारी (डी.एस. तिवारी)</strong> हूँ, जो कि **जिला मऊगंज, मध्य प्रदेश** से अपनी व्यावसायिक वित्तीय सेवाएं प्रदान करता हूँ। मैं व्यापारिक फर्म्स के लिए एक अनुभवी अकाउंटेंट और औद्योगिक ट्रेनर के रूप में कार्य करता हूँ।</p>
+    <!-- नया प्रीमियम ऑनलाइन वर्क सेक्शन (PAN, GST, ITR, ITC) -->
+    <section class="container" id="online-services">
+        <div class="digital-services-section">
+            <h2 class="section-title" style="margin-bottom: 1rem;">Premium <span>Online Services Hub</span></h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto 2rem auto;">पैन कार्ड से लेकर कंप्लीट कॉर्पोरेट जीएसटी और इनकम टैक्स रिटर्न की एंड-टू-एंड ऑनलाइन रजिस्ट्रेशन और फाइलिंग सेवाएं। डिजिटल भारत की हर बड़ी सर्विस एक ही छत के नीचे।</p>
             
-            <p>मेरे पास वास्तविक व्यावसायिक खातों को संभालने का गहरा अनुभव है, जिसमें मुख्य रूप से निम्नलिखित विशेषज्ञता शामिल है:</p>
-            <ul>
-                <li><strong>पेरोल और ईपीएफ功 कार्य (Payroll & EPFO Solutions):</strong> कंपनियों के कर्मचारियों का सैलरी स्ट्रक्चर मैनेज करना, पीएफ (PF), ईएसआई (ESI) और EPFO पोर्टल पर ऑनलाइन चालान जनरेट करने से जुड़े सभी पेरोल वर्क्स।</li>
-                <li><strong>बैंक रीकॉन्सिलिएशन (Bank Reconciliation):</strong> जटिल बैंक स्टेटमेंट्स का व्यापारिक खातों (Ledger Books) से सटीक मिलान करना।</li>
-                <li><strong>जीएसटी कंप्लायंस (GST Reconciliation):</strong> GSTR-1 सेल्स इनवॉइस को व्यवस्थित अपलोड करना, GSTR-3B टैक्स लायबिलिटी की गणना और GSTR-2B के साथ इनपुट टैक्स क्रेडिट (ITC) का एडवांस डेटा मिलान।</li>
-                <li><strong>फाइनेंसियल स्टेटमेंट्स (Final Accounts):</strong> वित्तीय वर्ष के अंत में पूरी सटीकता के साथ ट्रेडिंग अकाउंट, प्रॉफिट एंड लॉस अकाउंट और मुख्य **बैलेंस शीट** तैयार करना।</li>
-            </ul>
+            <div class="highlight-grid">
+                <!-- कार्ड 1: GST -->
+                <div class="highlight-card">
+                    <span class="service-badge">REGISTRATION & FILING</span>
+                    <h4>GST Management</h4>
+                    <ul>
+                        <li>New GST Registration Setup</li>
+                        <li>GSTR-1 Monthly/Quarterly Filing</li>
+                        <li>GSTR-3B Return Submissions</li>
+                        <li>GSTR-2B Advanced Matching</li>
+                        <li>GST Cancellation & Revocation</li>
+                    </ul>
+                </div>
+
+                <!-- कार्ड 2: ITR -->
+                <div class="highlight-card">
+                    <span class="service-badge">TAX COMPLIANCE</span>
+                    <h4>Income Tax (ITR)</h4>
+                    <ul>
+                        <li>Salaried & Business ITR Filing</li>
+                        <li>ITR-1, ITR-2, ITR-3 & ITR-4 Experts</li>
+                        <li>Tax Planning & Consultations</li>
+                        <li>Income Tax Notice Replies</li>
+                        <li>Form 16 / 26AS Verification</li>
+                    </ul>
+                </div>
+
+                <!-- कार्ड 3: PAN & ITC -->
+                <div class="highlight-card">
+                    <span class="service-badge">GOVT SCHEMES</span>
+                    <h4>PAN & ITC Solutions</h4>
+                    <ul>
+                        <li>Instant New PAN Card Apply</li>
+                        <li>PAN-Aadhaar Link Support</li>
+                        <li>PAN Card Corrections/Updates</li>
+                        <li>ITC (Input Tax Credit) Audits</li>
+                        <li>Capital Ledger Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- कार्ड 4: Payroll & CSC -->
+                <div class="highlight-card">
+                    <span class="service-badge">DIGITAL CSC</span>
+                    <h4>Payroll & Online Works</h4>
+                    <ul>
+                        <li>EPFO & PF Account Setup</li>
+                        <li>ESI Registration & Returns</li>
+                        <li>UAN Activation & KYC Update</li>
+                        <li>Udyam MSME Registrations</li>
+                        <li>All Premium CSC Portal Services</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- प्रैक्टिकल ट्रेनिंग सेक्शन -->
-    <section class="container" id="training">
-        <h2 class="section-title">Real Company <span>Practical Training</span></h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Tally Prime Architecture</h3>
-                <p>जीएसटी इनवॉइसिंग, ई-वे बिल जनरेशन, डेटा बैकअप, वाउचर क्लासिफिकेशन और लाइव कंपनी डेटा पर पूरी बारीकी के साथ आधुनिक Tally Prime की ट्रेनिंग।</p>
-            </div>
-            <div class="service-card">
-                <h3>Tally ERP 9 Mastery</h3>
-                <p>पारंपरिक और महत्वपूर्ण व्यावसायिक संरचनाओं के लिए बुनियादी इन्वेंट्री ट्रैकिंग, टैक्स कैलकुलेशन और लेजर क्रिएशन की मजबूत व्यावहारिक समझ।</p>
-            </div>
-            <div class="service-card">
-                <h3>Live Project Internships</h3>
-                <p>किताबी ज्ञान से हटकर, असली कंपनियों के वास्तविक बिलों, परचेज एंट्रीज और बैंक स्टेटमेंट्स पर **Online और Offline दोनों माध्यमों** से प्रैक्टिकल ट्रेनिंग।</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- नया लाइव एडमिशन फॉर्म सेक्शन -->
-    <section class="container" id="admission">
-        <h2 class="section-title">Course <span>Admission Form</span></h2>
-        
-        <div class="admission-section">
-            <!-- 100% वर्किंग और सिक्योर फॉर्म डिलीवरी API -->
-            <form action="https://formbold.com" method="POST">
-                
-                <!-- सुरक्षा चेतावनी टेक्स्ट -->
-                <div class="security-warning">
-                    ⚠️ <strong>महत्वपूर्ण सुरक्षा चेतावनी:</strong> यदि किसी भी अज्ञात व्यक्ति या बाहरी नंबर द्वारा हमारे संस्थान का नाम लेकर आपसे कॉल पर पैसों की मांग या ऑनलाइन पेमेंट की मांग की जाती है, तो <strong>कृपया बिल्कुल भी भुगतान ना करें</strong>। हम किसी भी अनाधिकृत लेनदेन के जिम्मेदार नहीं हैं।
-                </div>
-
-                <div class="form-group">
-                    <label for="name">विद्यार्थी का नाम (Full Name):</label>
-                    <input type="text" id="name" name="Student_Name" placeholder="अपना पूरा नाम दर्ज करें" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">मोबाइल नंबर (Mobile Number):</label>
-                    <input type="tel" id="phone" name="Mobile_Number" placeholder="अपना 10 अंकों का मोबाइल नंबर भरें" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">ईमेल आईडी (Email ID):</label>
-                    <input type="email" id="email" name="Email_Address" placeholder="अपनी ईमेल आईडी दर्ज करें" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="course">कोर्स का चयन करें (Select Course):</label>
-                    <select id="course" name="Selected_Course" required>
-                        <option value="" disabled selected>-- कृपया अपना कोर्स चुनें --</option>
-                        <option value="Tally Prime Practical Training">Tally Prime (Industrial Accounting Training)</option>
-                        <option value="Tally ERP 9 Modules">Tally ERP 9 (Core Systems & Ledger Management)</option>
-                        <option value="Both Courses (Combo Batch)">Tally Prime + Tally ERP 9 (Complete Suite)</option>
-                    </select>
-                </div>
-
-                <!-- फॉर्म को आपकी ईमेल आईडी पर ही रूट करने के लिए हिडन फील्ड -->
-                <input type="hidden" name="_to" value="tiwariankit4569@gmail.com">
-
-                <button type="submit" class="btn btn-submit">Submit Application 📥</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- संपर्क सेक्शन -->
-    <section class="container" id="contact">
-        <div class="contact-info">
-            <h2 style="color: var(--accent-gold); margin-bottom: 1.5rem; font-family: 'Montserrat', sans-serif;">Corporate Office Desk</h2>
-            <p>अपने व्यवसाय के एकाउंट्स/पेरोल को व्यवस्थित कराने अथवा व्यावहारिक कोचिंग बैचों में प्रवेश के लिए सीधे कॉल या ईमेल बटन का उपयोग करें।</p>
-            
