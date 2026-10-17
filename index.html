@@ -86,6 +86,23 @@
             color: var(--accent-gold);
         }
 
+        /* वेलकम और फ्रॉड अलर्ट बैनर */
+        .welcome-banner {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(28, 37, 65, 0.6) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-banner h3 {
+            color: var(--accent-gold);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
         .admission-section {
             background: linear-gradient(135deg, var(--card-bg) 0%, #111a36 100%);
             padding: 4rem 2rem;
@@ -122,13 +139,15 @@
         .security-warning {
             background-color: rgba(239, 68, 68, 0.15);
             border: 1px solid #ef4444;
-            padding: 1rem;
+            padding: 1.2rem;
             border-radius: 8px;
             color: #fca5a5;
             font-size: 0.95rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             text-align: justify;
             font-weight: 500;
+            line-height: 1.6;
+            box-shadow: 0 5px 15px rgba(239, 64, 64, 0.1);
         }
 
         .btn-submit {
@@ -187,6 +206,12 @@
     <!-- मुख्य हीरो सेक्शन -->
     <section class="hero">
         <div class="hero-content">
+            <!-- सुंदर स्वागत संदेश -->
+            <div class="welcome-banner">
+                <h3>पधारने वाले सभी आगंतुकों का हार्दिक स्वागत है!</h3>
+                <p style="color: var(--text-main); font-size: 0.95rem;">Tiwari Accounting Online पोर्टल पर आपका स्वागत है। हम आपके व्यावसायिक खातों को सशक्त और छात्रों को इंडस्ट्री-रेडी बनाने के लिए प्रतिबद्ध हैं।</p>
+            </div>
+            
             <h1>Daya Shankar <span>Tiwari</span></h1>
             <div class="hero-subtitle">B.Com (Banking, Finance & Accounting)</div>
             <p>Senior accounting consultant and industrial trainer operating from Mauganj, MP. Providing advanced ledger structuring, payroll processing, corporate tax compliance, and digital government solutions.</p>
@@ -211,7 +236,7 @@
     <section class="container" id="online-services">
         <div class="digital-services-section">
             <h2 class="section-title" style="margin-bottom: 1rem;">Premium <span>Online Services Hub</span></h2>
-            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto 2rem auto;">पैन कार्ड से लेकर कंप्लीट कॉर्पोरेट जीएसटी और इनकम टैक्स रिटर्न की एंड-टू-एंड ऑनलाइन रजिस्ट्रेशन और फाइलिंग सेवाएं। डिजिटल भारत की हर बड़ी सर्विस एक ही छत के नीचे।</p>
+            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto 2rem auto;">पैन कार्ड से लेकर कंप्लीट कॉर्पोरेट जीएसटी और इनकम टैक्स रिटर्न की एंड-तू-एंड ऑनलाइन रजिस्ट्रेशन और फाइलिंग सेवाएं। डिजिटल भारत की हर बड़ी सर्विस एक ही छत के नीचे।</p>
             
             <div class="highlight-grid">
                 <!-- कार्ड 1: GST -->
@@ -243,29 +268,3 @@
                 <!-- कार्ड 3: PAN & ITC -->
                 <div class="highlight-card">
                     <span class="service-badge">GOVT SCHEMES</span>
-                    <h4>PAN & ITC Solutions</h4>
-                    <ul>
-                        <li>Instant New PAN Card Apply</li>
-                        <li>PAN-Aadhaar Link Support</li>
-                        <li>PAN Card Corrections/Updates</li>
-                        <li>ITC (Input Tax Credit) Audits</li>
-                        <li>Capital Ledger Optimization</li>
-                    </ul>
-                </div>
-
-                <!-- कार्ड 4: Payroll & CSC -->
-                <div class="highlight-card">
-                    <span class="service-badge">DIGITAL CSC</span>
-                    <h4>Payroll & Online Works</h4>
-                    <ul>
-                        <li>EPFO & PF Account Setup</li>
-                        <li>ESI Registration & Returns</li>
-                        <li>UAN Activation & KYC Update</li>
-                        <li>Udyam MSME Registrations</li>
-                        <li>All Premium CSC Portal Services</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
